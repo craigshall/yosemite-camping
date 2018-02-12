@@ -4,6 +4,7 @@ import copy
 import requests
 
 import urllib
+from urlparse import parse_qs
 from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 
@@ -11,9 +12,9 @@ from bs4 import BeautifulSoup
 PARKS = {
     '70925': 'UPPER PINES',
     '70928': 'LOWER PINES',
-    '70927': 'NORTH PINES' #,
-#    '73635': 'STANISLAUS',
-#    '70926': 'TUOLOMNE MEADOWS'
+    '70927': 'NORTH PINES',
+    '73635': 'STANISLAUS',
+    '70926': 'TUOLOMNE MEADOWS'
 }
 
 # Sets the search location to yosemite
@@ -91,7 +92,7 @@ def getSiteList(html):
             # Strip down to get query parameters
             get_query = get_url[get_url.find("?") + 1:] if get_url.find("?") >= 0 else get_url
             if get_query:
-                get_params = urllib.parse.parse_qs(get_query)
+                get_params = parse_qs(get_query)
                 siteId = get_params['parkId']
                 if siteId and siteId[0] in PARKS:
                     results.append("%s, Booking Url: %s" % (PARKS[siteId[0]], BASE_URL + get_url))
@@ -124,9 +125,9 @@ if __name__ == "__main__":
     sites = findCampSites(arg_dict)
     if sites:
         for site in sites:
-            print( site + \
+            print site + \
                 "&arrivalDate={}&departureDate={}" \
                 .format(
-                        urllib.parse.quote_plus(formatDate(arg_dict['start_date'])),
-                        urllib.parse.quote_plus(formatDate(arg_dict['end_date']))))
+                        urllib.quote_plus(formatDate(arg_dict['start_date'])),
+                        urllib.quote_plus(formatDate(arg_dict['end_date'])))
 
