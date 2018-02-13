@@ -1,3 +1,5 @@
+# Refigured to work with an Anaconda install of Python3 on MacOS 10.13.3 and email positive results
+
 # Campsite Availability Scraping
 This is a simple script for scraping availability of campgrounds! The recreation.gov api doesn't reveal campsite availability, so this script spoofs a session through their search portal to allow programmatic polling of campsite availability.
 
@@ -20,7 +22,12 @@ Use: `python campsites.py --start_date 2015-04-24 --end_date 2015-04-25`
 
 Best use is to set a crontab on a ~5 minute interval (I've found that a 10-minute interval is too long because the campsites will be taken by the time I'm able to act on the alert).
 
-`campsites.sh` demos a simple bash script wrapping the python script and opening a text file if results are found that could be set up to be triggered through cron.
+To configure gmail to send from within the shell script follow the directions found here:
+https://codana.me/2014/11/23/sending-gmail-from-os-x-yosemite-terminal/
+
+I recommend setting up a special purpose gmail account which you do not use for anything else.  That way you do not need to use 2-factor and you can configure the security settings to low.
+
+`campsites.sh` Now sends an email with the Booking URL to you.
 
 ## Searching for parks other than Yosemite
 
