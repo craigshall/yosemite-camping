@@ -3,12 +3,16 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>org.thatwhichislearnt.reservations.Yosemite</string>
+    <string>local.Yosemite</string>
     <key>ProgramArguments</key>
     <array>
         <string>/Users/Parent/Python/yosemite-camping-master/campsites.sh</string>
     </array>
     <key>StartInterval</key>
     <integer>300</integer>
+    <key>StandardErrorPath</key>
+    <string>/tmp/local.Yosemite.err</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/local.Yosemite.out</string>
 </dict>
 </plist>
