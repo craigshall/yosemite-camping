@@ -126,7 +126,7 @@ if __name__ == "__main__":
     if sites:
         for site in sites:
             print( site + \
-                "&arrivalDate={}&departureDate={}" \
+                "&arrivalDate={}&departureDate={}&flexDates=2w" \
                 .format(
                         urllib.parse.quote_plus(formatDate(arg_dict['start_date'])),
                         urllib.parse.quote_plus(formatDate(arg_dict['end_date']))))
