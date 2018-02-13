@@ -4,7 +4,7 @@ RESULTS=`grep -E '^.*[^\n]+.*$' results/result_$1_$2.txt | wc -l`
 if [ $RESULTS -gt "0" ];
 then
     echo "RESULTS FOUND - "`date`
-    Open /Applications/TextEdit.app results/result_$1_$2.txt;
+    echo results/result_$1_$2.txt | mail -s "Get this Campsite!" craigsh@gmail.com
 else
     echo "NO RESULTS FOUND - "`date`;
 fi;
