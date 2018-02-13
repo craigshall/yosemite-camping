@@ -50,7 +50,8 @@ PAYLOAD = {
     'category': 'camping',
     'availability': 'all',
     'interest': 'camping',
-    'usingCampingForm': 'false'
+    'usingCampingForm': 'false',
+    'flexDates': '2w' #set to '' for "Not Flexible" or '2w' for "2 weeks" or '4w' for "4 weeks" 
 }
 
 
