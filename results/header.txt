@@ -1,0 +1,2 @@
+When you first go to recreation.gov it has not yet set a sessionID cookie and won't autoload the date fields.
+Click the first link twice to cause the recreation.gov site to set the sessionID cookie and then autofill the date on the second click.
