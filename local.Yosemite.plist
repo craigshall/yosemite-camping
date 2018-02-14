@@ -5,20 +5,24 @@
     <key>Label</key>
     <string>local.Yosemite</string>
     <key>WorkingDirectory</key>
-    <string>/Users/Parent/Python/yosemite-camping-master</string>
+    <string>/full-path-to/yosemite-camping-master</string>
+    <key>UserName</key>
+    <string>actual-username</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/Parent/Python/yosemite-camping-master/campsites.sh</string>
-        <string>2018-03-01</string>
-        <string>2018-03-03</string>
+        <string>/full-path-to/yosemite-camping-master/campsites.sh</string>
+        <string>YYYY-MM-DD</string>
+        <string>YYYY-MM-DD</string>
     </array>
     <key>StartInterval</key>
-    <integer>300</integer>
+    <integer>180</integer>
     <key>StandardErrorPath</key>
     <string>/tmp/local.Yosemite.err</string>
     <key>StandardOutPath</key>
     <string>/tmp/local.Yosemite.out</string>
     <key>RunAtLoad</key>
+    <true/>
+    <key>AbandonProcessGroup</key>
     <true/>
 </dict>
 </plist>
